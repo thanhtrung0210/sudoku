@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txt_thi2_xin_chao"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Xin chào abc"
+        android:textStyle="bold"
+        android:fontFamily="@font/utm_avobold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bt_thi2_de"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Dễ"
+            android:fontFamily="@font/utm_avo"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:background="@drawable/ds_bo_goc_nut_choi"
+            android:backgroundTint="@color/light_gray"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/bt_thi2_binh_thuong"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Bình thường"
+            android:fontFamily="@font/utm_avo"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:background="@drawable/ds_bo_goc_nut_choi"
+            android:backgroundTint="@color/light_gray"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/bt_thi2_kho"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Khó"
+            android:fontFamily="@font/utm_avo"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:background="@drawable/ds_bo_goc_nut_choi"
+            android:backgroundTint="@color/light_gray"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Điểm cao"
+            android:drawableLeft="@drawable/ic_thi_hightscore"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_thi2_diem_cao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Thời gian đã chơi"
+            android:drawableLeft="@drawable/ic_pf_time"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_thi2_thoi_gian_da_choi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="- giờ - phút"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Đã hoàn thành"
+            android:drawableLeft="@drawable/ic_pf_grid"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_thi2_da_hoan_thanh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Thắng hoàn hảo"
+            android:drawableLeft="@drawable/ic_pf_like"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_thi2_thang_hoan_hao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Win Streak tốt nhất"
+            android:drawableLeft="@drawable/ic_pf_flag"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_thi2_win_streak"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Thời gian tốt nhất"
+            android:drawableLeft="@drawable/ic_pf_time"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_thi2_thoi_gian_tot_nhat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="--:--"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

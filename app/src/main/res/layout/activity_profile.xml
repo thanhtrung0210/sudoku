@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="11">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/ds_bo_goc_nut_choi"
+            android:backgroundTint="#deeefd"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_brain"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/txt_pf_highscore"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+            
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"/>
+
+        <ImageView
+            android:id="@+id/bt_pf_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_top_setting"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_pf_avt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pic_avt"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_pf_name_user"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Bùi Thành Trung"
+        android:fontFamily="@font/utm_avobold"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txt_pf_sum_time"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Thời gian đã chơi: 0 giờ 0 phút"
+        android:fontFamily="@font/utm_avo"
+        android:textStyle="bold"
+        android:textColor="@color/dark_gray"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Chế độ kinh điển"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@drawable/ds_mode_choi_bg"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Thử thách hàng ngày"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/dark_gray"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sự kiện"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/dark_gray"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="PvP"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/dark_gray"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Thành tựu"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/dark_gray"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nhanh"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:background="@drawable/ds_bo_goc_nut_choi"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/bt_pf_de"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Dễ"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:background="@drawable/ds_bo_goc_nut_choi"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/bt_pf_binh_thuong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bình thường"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:background="@drawable/ds_bo_goc_nut_choi"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/bt_pf_kho"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Khó"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:background="@drawable/ds_bo_goc_nut_choi"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Chuyên gia"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:background="@drawable/ds_bo_goc_nut_choi"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Khổng lồ"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:background="@drawable/ds_bo_goc_nut_choi"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Đã hoàn thành"
+            android:drawableLeft="@drawable/ic_pf_grid"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_pf_da_hoan_thanh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Thắng hoàn hảo"
+            android:drawableLeft="@drawable/ic_pf_like"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_pf_thang_hoan_hao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Win Streak tốt nhất"
+            android:drawableLeft="@drawable/ic_pf_flag"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_pf_win_streak"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/ds_bo_goc_nut_tiep_tuc"
+        android:backgroundTint="@color/light_gray"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=" Thời gian tốt nhất"
+            android:drawableLeft="@drawable/ic_pf_time"
+            android:fontFamily="@font/utm_avo"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_pf_thoi_gian_tot_nhat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="--:--"
+            android:fontFamily="@font/utm_avobold"
+            android:textSize="16sp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bt_pf_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="Xóa dữ liệu"
+        android:fontFamily="@font/utm_avo"
+        android:textStyle="bold"
+        android:textColor="@color/dark_gray"
+        android:background="@drawable/ds_bo_goc_nut_choi"
+        android:backgroundTint="@color/light_gray"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:drawableLeft="@drawable/ic_pf_delete"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/ds_menu_bg">
+
+        <LinearLayout
+            android:id="@+id/bt_pf_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_bot_trang_chu"
+                app:tint="@color/dark_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Trang chủ"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_pf_pvp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_bot_pvp"
+                app:tint="@color/dark_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="PvP"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_pf_giai_tri"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_bot_game"
+                app:tint="@color/dark_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Giải trí"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_pf_ca_nhan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_bot_ca_nhan"
+                app:tint="@color/sudoku" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Cá nhân"
+                android:textColor="@color/sudoku"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

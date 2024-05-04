@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/bo_goc_nut.xml" value="0.1875" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/custom_switch_off.xml" value="0.198" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/custom_switch_on.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/dimen.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_bo_goc_nut.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_bo_goc_nut_choi.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_bo_goc_nut_do_kho.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_bo_goc_nut_tiep_tuc.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_bottom_sheet_dialog.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_khung_sudoku.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_khung_sudoku_1x1.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_khung_sudoku_1x1_highlight.xml" value="0.12" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_khung_sudoku_1x1_highlight_gray.xml" value="0.12" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_khung_sudoku_3x3.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_menu_bg.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_mode_choi_bg.xml" value="0.247" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_thi_bo_goc_nut_bat_dau.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ds_tro_choi_moi_bg.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/hinh_tron.xml" value="0.1885" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_baseline_today_24.xml" value="0.1885" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_bot_ca_nhan.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_bot_game.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_bot_trang_chu.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_bot_trang_chu_blue.xml" value="0.1885" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_bot_trang_chu_gray.xml" value="0.1885" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_brain.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_game.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_launcher_background.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_pf_delete.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_pf_grid.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_pf_like.xml" value="0.247" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_play_eraser.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_play_lightbulb.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_play_pencil.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_pvp.xml" value="0.2055" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_switch.xml" value="0.181" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_switch_off.xml" value="0.181" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_switch_on.xml" value="0.181" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_themes.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_thi_hightscore.xml" value="0.2155" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/ic_top_setting.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/shape.xml" value="0.1885" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/switch_thumb_selector.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/drawable/switch_track_selector.xml" value="0.209" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/activity_play.xml" value="0.6" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/activity_scr1.xml" value="0.18671875" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/activity_scr2.xml" value="0.24864130434782608" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.24864130434782608" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/play_activity.xml" value="0.22826086956521738" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/layout/test_stroke.xml" value="0.22826086956521738" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/menu/menu_bot.xml" value="0.25" />
+        <entry key="..\:/Shy/Android/04_Sudoku/app/src/main/res/menu/thanh_dieu_huong.xml" value="0.6" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Họ tên"
+        android:textStyle="bold"
+        android:fontFamily="@font/utm_avobold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:gravity="center|left"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"/>
+
+    <TextView
+        android:id="@+id/txt_thi1_ho_ten"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textStyle="bold"
+        android:fontFamily="@font/utm_avobold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:gravity="center|left"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:padding="40dp"
+        android:background="@drawable/ds_khung_sudoku_3x3"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/bt_thi1_bat_dau"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Bắt đầu"
+        android:textSize="36sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/utm_avobold"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/sudoku"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:elevation="10dp"
+        android:gravity="center"/>
+
+</LinearLayout>

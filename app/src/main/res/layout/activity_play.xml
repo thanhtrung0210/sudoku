@@ -1,0 +1,1893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="19"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/bt_play_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_top_back"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"/>
+
+        <ImageView
+            android:id="@+id/bt_play_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_top_share"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:id="@+id/bt_play_pause"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_top_pause"/>
+
+        <ImageView
+            android:id="@+id/bt_play_themes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_top_themes"
+            android:layout_margin="2dp"/>
+
+        <ImageView
+            android:id="@+id/bt_play_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_top_setting"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_play_diem_so"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Điểm số: 0"
+            android:fontFamily="@font/utm_avobold"
+            android:textColor="@color/sudoku"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_play_loi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Lỗi: 0/3"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:layout_marginStart="20dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/txt_play_do_kho"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="(Độ khó)"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txt_play_thoi_gian"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="(Thời gian)"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:layout_marginEnd="20dp"
+                android:textSize="14sp"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/sudoku"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp">
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_0_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1" />
+
+            <TextView
+                android:id="@+id/txt_play_0_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_0_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_0_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_0_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_0_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_0_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_0_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_0_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_1_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_2_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_3_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_3_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_3_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_3_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_3_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_3_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_3_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_3_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_3_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_4_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_5_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_6_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_6_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_6_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_6_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_6_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_6_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:padding="1dp"
+            android:background="@drawable/ds_khung_sudoku_3x3">
+
+            <TextView
+                android:id="@+id/txt_play_6_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_6_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_6_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_7_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+            <TextView
+                android:id="@+id/txt_play_8_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:fontFamily="@font/utm_avobold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/ds_khung_sudoku_1x1"/>
+
+        </GridLayout>
+
+    </GridLayout>
+
+    <Switch
+        android:id="@+id/bt_play_quick_switch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:checked="false"
+        android:layout_marginEnd="20dp"
+        android:track="@drawable/switch_track_selector"
+        android:thumb="@drawable/switch_thumb_selector"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <LinearLayout
+            android:id="@+id/bt_play_undo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_play_undo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Hoàn tác"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_play_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_play_eraser"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Xóa"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_play_pencil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_play_pencil"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Viết chì"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bt_play_suggest"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_play_lightbulb"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Gợi ý"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/utm_avo"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="9"
+        android:orientation="horizontal"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="1"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="2"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="3"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="4"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="5"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="6"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="7"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="8"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bt_play_9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="9"
+                    android:textColor="@color/sudoku"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_play_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/dark_gray"
+                    android:fontFamily="@font/utm_avo"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
